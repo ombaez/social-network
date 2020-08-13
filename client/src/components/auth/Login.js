@@ -8,7 +8,7 @@ export const Login = () => {
         password2:'',
     })
 
-    const {email,password,password2} = formData
+    const {email,password} = formData
     const onChange = e => setFormData({...formData,[e.target.name]:e.target.value})
     const onSubmit = async(e) => {
         e.preventDefault()
