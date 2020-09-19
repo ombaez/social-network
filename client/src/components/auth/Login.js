@@ -8,13 +8,14 @@ export const Login = ({ login, isAuthenticated }) => {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
-    password2: ""
   });
 
   const { email, password } = formData;
+
   const onChange = e =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
-  const onSubmit = async e => {
+
+    const onSubmit = async e => {
     e.preventDefault();
     login(email, password);
   };
@@ -60,7 +61,7 @@ export const Login = ({ login, isAuthenticated }) => {
   );
 };
 
-login.PropTypes = {
+Login.propTypes = {
   login: PropTypes.func.isRequired,
   isAuthenticated: PropTypes.bool
 };
